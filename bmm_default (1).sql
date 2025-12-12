@@ -722,16 +722,17 @@ CREATE TABLE `tbl_order_refund_query` (
 -- Table structure for table `tbl_pages_styles_preview`
 --
 
-CREATE TABLE `tbl_pages_styles_preview` (
-  `id` bigint NOT NULL,
-  `theme_id` int DEFAULT NULL,
-  `template_id` int DEFAULT NULL,
-  `page_id` bigint NOT NULL,
-  `page_slug` varchar(100) NOT NULL,
-  `device_type` enum('m','d','t') NOT NULL DEFAULT 'd',
-  `page_style` text NOT NULL
+CREATE TABLE tbl_pages_styles_preview (
+  id bigint NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  theme_id int DEFAULT NULL,
+  preview_id varchar(100) DEFAULT NULL,
+  template_id int DEFAULT NULL,
+  page_id bigint NOT NULL,
+  page_slug varchar(100) NOT NULL,
+  device_type enum('m','d','t') NOT NULL DEFAULT 'd',
+  page_style text NOT NULL,
+  status enum('0','1','2') NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
-
 -- --------------------------------------------------------
 
 --
@@ -761,7 +762,7 @@ CREATE TABLE `tbl_page_sections` (
 --
 
 CREATE TABLE `tbl_page_sections_preview` (
-  `view_id` bigint NOT NULL,
+  `view_id` bigint NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `theme_id` int DEFAULT NULL,
   `template_id` int DEFAULT NULL,
   `page_id` int DEFAULT NULL,
