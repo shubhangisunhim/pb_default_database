@@ -1214,7 +1214,7 @@ CREATE TABLE `tbl_transactions` (
 --
 
 CREATE TABLE `tbl_users` (
-  `user_id` bigint NOT NULL,
+  `user_id` bigint NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `username` varchar(50) DEFAULT NULL,
   `email` varchar(50) DEFAULT NULL,
   `country_code` varchar(10) DEFAULT NULL,
@@ -1644,8 +1644,6 @@ ALTER TABLE `tbl_transactions`
 --
 -- Indexes for table `tbl_users`
 --
-ALTER TABLE `tbl_users`
-  ADD PRIMARY KEY (`user_id`);
 
 --
 -- Indexes for table `tbl_weight_unit`
@@ -2020,8 +2018,6 @@ ALTER TABLE `tbl_transactions`
 --
 -- AUTO_INCREMENT for table `tbl_users`
 --
-ALTER TABLE `tbl_users`
-  MODIFY `user_id` bigint NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tbl_weight_unit`
