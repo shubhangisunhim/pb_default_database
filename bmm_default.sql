@@ -1232,8 +1232,8 @@ CREATE TABLE `tbl_users` (
 -- Dumping data for table `tbl_users`
 --
 
-INSERT INTO `tbl_users` (`user_id`, `username`, `email`, `country_code`, `phone`, `password`, `user_type`, `registered_date`, `status`, `is_guest`, `referral_id`, `referral_by`) VALUES
-(1, 'superadmin', 'vipul@gmail.com', NULL, '', '$2a$08$u5QrHEGO0zCS95ZaA24C8O6jr.dLGpn.wmh2joJbZGVGYiFdS4uru', '1', '2022-05-02 08:29:43', '1', 'n', NULL, 0);
+INSERT INTO `tbl_users` ( `username`, `email`, `country_code`, `phone`, `password`, `user_type`, `registered_date`, `status`, `is_guest`, `referral_id`, `referral_by`) VALUES
+('superadmin', 'vipul@gmail.com', NULL, '', '$2a$08$u5QrHEGO0zCS95ZaA24C8O6jr.dLGpn.wmh2joJbZGVGYiFdS4uru', '1', '2022-05-02 08:29:43', '1', 'n', NULL, 0);
 
 -- --------------------------------------------------------
 
