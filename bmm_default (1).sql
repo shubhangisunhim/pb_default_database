@@ -2021,7 +2021,7 @@ ALTER TABLE `tbl_transactions`
 -- AUTO_INCREMENT for table `tbl_users`
 --
 ALTER TABLE `tbl_users`
-  MODIFY `user_id` bigint NOT NULL AUTO_INCREMENT;
+  MODIFY `user_id` bigint NOT NULL AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tbl_weight_unit`
